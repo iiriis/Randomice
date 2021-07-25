@@ -1,5 +1,5 @@
 # Randomice
-An Electronic Dice
+An Electronic Dice that prevents cheating in board games
 
 ## Inspiration
 On any occasion, when our cousins or friends come to our place, we sometimes play board games for fun. And there is always a healthy incident of being sneaky or cheating that lifts up everyone's mood. But sometimes, during serious games, we need to be sure that the game is fair, and hence the idea of our project 'Randomice' came into being, where an electronic dice will show random results which will prevent the game from being rigged. 
