@@ -19,7 +19,7 @@ At first, we were not sure if we were going to build any project at all, since o
 If we are to say what our greatest accomplishment was, then it was attempting to build this project in midst of all the other chores we had to do. It is truly fulfilling to complete a project, but we think the real accomplishment lies in the efforts. 
 
 ## What we learned
-
+We learned about generating random numbers and sequences along with port manipulation. We also realized how important teamwork is and how a small idea can have several other possibilities. 
 
 ## What's next for Randomice
-
+We are planning to update Randomice with an OLED display using which users will be able to play games that involve random number generation or random outputs.  
