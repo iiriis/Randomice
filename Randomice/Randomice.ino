@@ -2,24 +2,30 @@ int dice=0;
 
 void setup() 
 {
-  Serial.begin(9600);
   srand(analogRead(A0));
-
+  
   DDRB|=0x3f;
   DDRD|=0xff;
-
-
+  pinMode(A1,INPUT_PULLUP);
+   
 }
 
 long ps=0;
-void loop() {
-  dice=(rand()%6)+1;
-  Serial.println(dice);
-  driveLEDs(dice);
-  driveSSD(dice);
-
-  delay(1000);
-  srand(analogRead(A0));
+void loop() {  
+  
+  if(!digitalRead(A1))
+  {
+    rolling();
+  
+  	dice=(rand()%6)+1;  
+  	driveLEDs(dice);
+  	driveSSD(dice);
+  
+  
+  
+  	delay(1000);  
+  	srand(analogRead(A0));
+  }
 }
 
 void driveLEDs(byte x)
@@ -61,6 +67,28 @@ void driveSSD(byte x)
             break;
     default : PORTD|=0x00;
               break;
-  }
+  } 
+}
 
+void rolling()
+{
+  
+  for(int k=0;k<2;k++)
+  {
+  for(int i=1;i<=6;i++)
+  {
+    driveLEDs(i);
+    driveSSD(rand()%6+i);
+    srand(analogRead(A0));    
+    delay(100);
+  }
+  for(int i=5;i>=1;i--)
+  {
+    driveLEDs(i);
+    driveSSD(rand()%6+i);
+    srand(analogRead(A0));
+    delay(100);
+  }
+  }
+  
 }
